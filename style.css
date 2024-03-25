@@ -101,6 +101,7 @@ button:disabled {
     background-color: #000;
     height: 50%;
     padding: 1rem;
+    overflow: hidden;
 }
 
 .child {
