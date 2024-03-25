@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <title>FlexBox playground</title>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <h1>FlexBox playground</h1>
+      <!-- Flex Container -->
+      <div class="container">
+        <div class="right">
+          <h2>Flex box Container</h2>
+          <div class="flex-container">
+            <div class="child child-1">Child-1</div>
+            <div class="child child-2">Child-2</div>
+            <div class="child child-3">Child-3</div>
+            <div class="child child-4">Child-4</div>
+            <div class="child child-5">Child-5</div>
+            <div class="child child-6">Child-6</div>
+          </div>
+        </div>
+        <div class="left">
+          <!-- parent-controller-container -->
+          <div class="parent-controller-container">
+            <h3>Flex box parent controller</h3>
+            <div class="flex-control-container">
+              <!-- display -->
+              <div class="btn-control-container">
+                <button
+                  data-flex_property="display"
+                  value="flex"
+                  class="btn-control"
+                  id="display"
+                >
+                  display
+                </button>
+                <div class="flex-value-wrapper">block</div>
+              </div>
+              <!-- justify-content -->
+              <div class="btn-control-container">
+                <button
+                  data-flex_property="justify-content"
+                  class="btn-control flex"
+                >
+                  justify-content
+                </button>
+                <div class="flex-value-wrapper">
+                  <select name="justify-content" id="justify-content">
+                    <option value="flex-start" selected>flex-start</option>
+                    <option value="flex-end">flex-end</option>
+                    <option value="center">center</option>
+                    <option value="space-between">space-between</option>
+                    <option value="space-around">space-around</option>
+                    <option value="space-evenly">space-evenly</option>
+                  </select>
+                </div>
+              </div>
+              <!-- align-items -->
+              <div class="btn-control-container">
+                <button
+                  data-flex_property="align-items"
+                  class="btn-control flex"
+                >
+                  align-items
+                </button>
+                <div class="flex-value-wrapper">
+                  <select name="align-items" id="align-items">
+                    <option value="stretch" selected>stretch</option>
+                    <option value="flex-start">flex-start</option>
+                    <option value="flex-end">flex-end</option>
+                    <option value="center">center</option>
+                    <option value="baseline">baseline</option>
+                  </select>
+                </div>
+              </div>
+              <!-- align-content -->
+              <div class="btn-control-container">
+                <button
+                  data-flex_property="align-content"
+                  class="btn-control flex"
+                >
+                  align-content
+                </button>
+                <div class="flex-value-wrapper">
+                  <select name="align-content" id="align-content">
+                    <option value="flex-start" selected>flex-start</option>
+                    <option value="flex-end">flex-end</option>
+                    <option value="center">center</option>
+                    <option value="stretch">stretch</option>
+                    <option value="space-between">space-between</option>
+                    <option value="space-around">space-around</option>
+                    <option value="space-evenly">space-evenly</option>
+                    <option value="baseline">baseline</option>
+                  </select>
+                </div>
+              </div>
+              <!-- flex-direction -->
+              <div class="btn-control-container">
+                <button
+                  data-flex_property="flex-direction"
+                  class="btn-control flex"
+                >
+                  flex-direction
+                </button>
+                <div class="flex-value-wrapper">
+                  <select name="flex-direction" id="flex-direction">
+                    <option value="row" selected>row</option>
+                    <option value="row-reverse">row-reverse</option>
+                    <option value="column">column</option>
+                    <option value="column-reverse">column-reverse</option>
+                  </select>
+                </div>
+              </div>
+              <!-- flex-wrap: -->
+              <div class="btn-control-container">
+                <button data-flex_property="flex-wrap" class="btn-control flex">
+                  flex-wrap
+                </button>
+                <div class="flex-value-wrapper">
+                  <select name="flex-wrap" id="flex-wrap">
+                    <option value="nowrap" selected>nowrap</option>
+                    <option value="wrap">wrap</option>
+                    <option value="wrap-reverse">wrap-reverse</option>
+                  </select>
+                </div>
+              </div>
+              <!-- row-gap -->
+              <div class="btn-control-container">
+                <button data-flex_property="row-gap" class="btn-control flex">
+                  row-gap
+                </button>
+                <div class="flex-value-wrapper">
+                  <input
+                    name="rowGap"
+                    type="text"
+                    id="rowGap"
+                    placeholder="10px, 1rem, 2em,..."
+                  />
+                </div>
+              </div>
+              <!-- column-gap -->
+              <div class="btn-control-container">
+                <button
+                  data-flex_property="column-gap"
+                  class="btn-control flex"
+                >
+                  column-gap
+                </button>
+                <div class="flex-value-wrapper">
+                  <input
+                    name="columnGap"
+                    type="text"
+                    id="columnGap"
+                    placeholder="10px, 1rem, 2em,..."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- child-controller-container -->
+          <div class="child-controller-container">
+            <h3>Flex box child controller</h3>
+            <div class="flex-control-child">
+              <!-- align-self -->
+              <div class="btn-control-child">
+                <div class="flex-child">
+                  <select name="alignSelfChildSelect" id="alignSelfChildSelect">
+                    <option value="child-1" selected>Child-1</option>
+                    <option value="child-2">Child-2</option>
+                    <option value="child-3">Child-3</option>
+                    <option value="child-4">Child-4</option>
+                    <option value="child-5">Child-5</option>
+                    <option value="child-6">Child-6</option>
+                  </select>
+                </div>
+                <button
+                  data-flex_property="align-self"
+                  class="btn-control flex"
+                >
+                  align-self
+                </button>
+                <div class="flex-value-wrapper">
+                  <select name="alignSelfValueSelect" id="alignSelfValueSelect">
+                    <option value="auto" selected>auto</option>
+                    <option value="flex-start">flex-start</option>
+                    <option value="flex-end">flex-end</option>
+                    <option value="center">center</option>
+                    <option value="baseline">baseline</option>
+                    <option value="stretch">stretch</option>
+                  </select>
+                </div>
+              </div>
+              <!-- flex-basis -->
+              <div class="btn-control-child">
+                <div class="flex-child">
+                  <select name="flexBasis" id="flexBasisSelect">
+                    <option value="child-1" selected>Child-1</option>
+                    <option value="child-2">Child-2</option>
+                    <option value="child-3">Child-3</option>
+                    <option value="child-4">Child-4</option>
+                    <option value="child-5">Child-5</option>
+                    <option value="child-6">Child-6</option>
+                  </select>
+                </div>
+                <button
+                  data-flex_property="flex-basis"
+                  class="btn-control flex"
+                >
+                  flex-basis
+                </button>
+                <div class="flex-value-wrapper">
+                  <input
+                    name="flexBasis"
+                    type="text"
+                    id="flexBasis"
+                    placeholder="100px, 20%, ..."
+                  />
+                </div>
+              </div>
+              <!-- order -->
+              <div class="btn-control-child">
+                <div class="flex-child">
+                  <select name="order" id="orderSelect">
+                    <option value="child-1" selected>Child-1</option>
+                    <option value="child-2">Child-2</option>
+                    <option value="child-3">Child-3</option>
+                    <option value="child-4">Child-4</option>
+                    <option value="child-5">Child-5</option>
+                    <option value="child-6">Child-6</option>
+                  </select>
+                </div>
+                <button data-flex_property="order" class="btn-control flex">
+                  order
+                </button>
+                <div class="flex-value-wrapper">
+                  <input
+                    name="order"
+                    type="text"
+                    id="order"
+                    placeholder="1, 3, -1..."
+                    required
+                  />
+                </div>
+              </div>
+              <!-- flex-grow -->
+              <div class="btn-control-child">
+                <div class="flex-child">
+                  <select name="flexGrow" id="flexGrowSelect">
+                    <option value="child-1" selected>Child-1</option>
+                    <option value="child-2">Child-2</option>
+                    <option value="child-3">Child-3</option>
+                    <option value="child-4">Child-4</option>
+                    <option value="child-5">Child-5</option>
+                    <option value="child-6">Child-6</option>
+                  </select>
+                </div>
+                <button data-flex_property="flexGrow" class="btn-control flex">
+                  flex-grow
+                </button>
+                <div class="flex-value-wrapper">
+                  <input
+                    name="flexGrow"
+                    type="number"
+                    min="0"
+                    step="1"
+                    id="flexGrowNumber"
+                    value="0"
+                  />
+                </div>
+              </div>
+              <!-- flex-shrink -->
+              <div class="btn-control-child">
+                <div class="flex-child">
+                  <select name="flexShrink" id="flexShrinkSelect">
+                    <option value="child-1" selected>Child-1</option>
+                    <option value="child-2">Child-2</option>
+                    <option value="child-3">Child-3</option>
+                    <option value="child-4">Child-4</option>
+                    <option value="child-5">Child-5</option>
+                    <option value="child-6">Child-6</option>
+                  </select>
+                </div>
+                <button
+                  data-flex_property="flexShrink"
+                  class="btn-control flex"
+                >
+                  flex-shrink
+                </button>
+                <div class="flex-value-wrapper">
+                  <input
+                    name="flexShrink"
+                    type="number"
+                    min="0"
+                    step="1"
+                    id="flexShrinkNumber"
+                    value="1"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Scripts -->
+    <script src="script.js"></script>
+  </body>
+</html>
