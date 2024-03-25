@@ -48,4 +48,4 @@ If you'd like to contribute to this project, please follow these guidelines:
 
 ## Credits
 
-This web app was created by ==Salem Helwani==
+This web app was created by **Salem Helwani**
