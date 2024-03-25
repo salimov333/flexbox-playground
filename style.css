@@ -113,7 +113,7 @@ button:disabled {
     padding: 10px;
     color: inherit;
     font-weight: 500;
-    font-size: 1.1em;
+    font-size: min(1.1em, 3vw);
     background-color: rebeccapurple;
 }
 
