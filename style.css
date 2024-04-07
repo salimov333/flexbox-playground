@@ -78,7 +78,7 @@ button:disabled {
 }
 
 .container {
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     margin-inline: auto;
     display: flex;
     justify-content: center;
